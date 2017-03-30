@@ -1,0 +1,15 @@
+#{extends 'main.html' /}
+#{set title:' Post creator' /}
+
+<div class="creator">
+
+    
+	<input class="postName" type="text" placeholder="Enter post name" required>
+	<input type="file" class="file " name="FileUpload">
+ 	<script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
+ 	<script>tinymce.init({ selector:'textarea' });</script>
+ 	
+  	<textarea>Type your post...</textarea>
+  
+  	<button type="submit" class="postCreateBtn">Create the post</button>
+</div>

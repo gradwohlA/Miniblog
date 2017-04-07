@@ -1,22 +1,24 @@
 #{extends 'main.html' /}
 #{set title:' Admin Login' /}
-<form action="/action_page.php">
 
-  <div class="imgcontainer">
-  	<a href="http://ttk.pte.hu"><img src="public\images\logo.jpg" alt="logo" class="logo"></a>
-  </div>
 
-  <div class="container">
-    <input type="text" placeholder="Enter Username" name="username" required>
-
-    <input type="password" placeholder="Enter Password" name="password" required>
-
-    <button type="submit">Login</button>
-    <input type="checkbox"> Remember me
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn"><a class="cancelbtn" href="http://ttk.pte.hu">Back to the blog</a></button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+<div class="container">
+  <div class="jumbotron"></div>
+<div class="adminMenu">
+<ul>
+   <li><a href="/post">Create a post</a></li>
+   <li><a href="/user">Logout</a></li>
+</ul>
+</div>
+<div class="posts">
+#{list items:post, as:'post'}
+	<tr>
+		<th>${post.postTitle}</th>
+		<th><a href="">Poszt módosítása</a></th>
+		<th><a href="">De-/Activate post</a></th>
+		<th><a href="">Poszt törlése</a></th>
+		
+	</tr>	
+	#{/list}
+</div>
+</div>

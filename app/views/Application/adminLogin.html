@@ -1,17 +1,17 @@
 #{extends 'main.html' /}
 #{set title:' Admin Login' /}
 
-<form action="/action_page.php">
+<form action="adminLogin" method="post">
   <div class="imgcontainer">
-  	<a href="http://ttk.pte.hu"><img src="public\images\logo.jpg" alt="logo" class="logo"></a>
+  	<a href="/post"><img src="public\images\logo.jpg" alt="logo" class="logo"></a>
   </div>
 
   <div class="container">
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <input type="text" placeholder="Enter Username"  value="${flash.adminName}"name="adminName" required>
 
-    <input type="password" placeholder="Enter Password" name="password" required>
-<br>
-    <button type="submit">Login</button>
+    <input type="password" placeholder="Enter Password" value="${flash.password}" name="password" required>
+    <br>
+    <button type="submit" value="Login">Login</button>
     <br>
     <input type="checkbox"> Remember me
   </div>
